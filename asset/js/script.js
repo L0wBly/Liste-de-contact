@@ -36,13 +36,14 @@ fetch("https://random-data-api.com/api/v2/users?size=10")
 
                 const address = document.createElement("p");
                 address.classList.add("address")
-                address.textContent ="Country" + ": " + contact.address.country + ", " + "Street name" + ": " + contact.address.street_name + ", " + "Street adresse" + ": " + contact.address.street_address + ", " + "Zip code" + ": " + contact.address.zip_code;
+                address.textContent = " " + contact.address.street_address + ", " + contact.address.zip_code + ", " + contact.address.country
 
-                const error_map = document.createElement("h2");
+                const error_map = document.createElement("em");
                 error_map.classList.add("error_map")
-                error_map.textContent ="Wrong address !!"
+                error_map.textContent ="This address doesn't exist !!"
 
                 const plan = document.createElement("div");
+
                 plan.classList.add("map")
 
                 Name.appendChild(first_name);
